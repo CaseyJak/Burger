@@ -6,9 +6,9 @@ let app = express();
 let PORT = process.env.PORT || 8080;
 
 //Data Parse
-app.use(expresss.urlencoded({extended:true}))
+app.use(express.urlencoded({extended:true}));
 app.use(express.json());
-//app.use(express.static("/public"));
+app.use(express.static("/public"));
 
 //Handlebars Set-Up
 let exphbs = require("express-handlebars");
